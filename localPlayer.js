@@ -43,14 +43,14 @@
 			return controller;
 		})( player, radius );
 
-	//	rotation.
-	//	(function update(){
-	//		player.requestFrameID = requestAnimationFrame( update );
-	//		player.rotation.y = player.controller.direction + Math.PI;
-	//	})();
-
 	//	cameraLight control.
 		takeCameraLight( player );
 
 		return player;
 	})();
+
+	//	rotation.
+	//	(function update(){
+	//		player.requestFrameID = requestAnimationFrame( update );
+	//		player.rotation.y = player.controller.direction + Math.PI;
+	//	})();
