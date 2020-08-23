@@ -20,8 +20,6 @@
 		//	var FORWARD  = keyCodes[38] || keyCodes[87]; // "arrow UP"    or "W"
 		//	var BACKWARD = keyCodes[40] || keyCodes[83]; // "arrow DOWN"  or "S"
 
-		characterController.movementSpeed = 5; // debug!
-
 		function syncWithCameraController() {
 			var cameraFrontAngle = cameraController.getFrontAngle();
 			var characterFrontAngle = keyInputController.frontAngle;
