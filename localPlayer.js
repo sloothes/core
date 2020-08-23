@@ -32,16 +32,21 @@
 			controller.maxSlopeGradient = 0.5;
 			controller.center.set(0, radius, 0);
 			world.add( controller );
+		//	Update player direction.
+			watch(controller, "direction", function(prop,action,value){
+				controller.object.rotation.y = value + Math.PI;
+			});
+		//	Reset player position.
 			watch(controller.center, "y", function(prop,action,value){
 				if ( value < -1 ) controller.center.set(0, radius, 0);
 			}); return controller;
 		})( player, radius );
 
 	//	rotation.
-		(function update(){
-			player.requestFrameID = requestAnimationFrame( update );
-			player.rotation.y = player.controller.direction + Math.PI;
-		})();
+	//	(function update(){
+	//		player.requestFrameID = requestAnimationFrame( update );
+	//		player.rotation.y = player.controller.direction + Math.PI;
+	//	})();
 
 	//	cameraLight control.
 		takeCameraLight( player );
