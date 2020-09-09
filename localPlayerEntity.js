@@ -7,7 +7,7 @@
 
 	//	player.
 		var player = (function(){
-			var player = new Enitity();
+			var player = new Entity();
 			player.position.set( 0, 0, 0 );
 			player.name = "local player";
 			scene.add( player );
