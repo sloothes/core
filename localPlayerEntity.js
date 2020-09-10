@@ -9,8 +9,8 @@
 		var mesh = (function(d){
 			var geometry = new THREE.BoxGeometry(d,d,d);
 			var material = new THREE.MeshBasicMaterial();
-			var dummy = new THREE.Mesh(geometry,material);
-			dummy.visible = false; return dummy;
+			var mesh = new THREE.Mesh(geometry,material);
+			mesh.visible = false; return mesh;
 		})( 1.0 );
 
 	//	player entity.
