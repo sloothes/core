@@ -6,10 +6,12 @@
 		var radius = 0.85;
 
 	//	A dummy mesh (required for entity).
-		var mesh = (function(){
-			var geometry = new THREE.Geometry();
-			return new THREE.Mesh( geometry );
-		})();
+		var mesh = (function(radius){
+			var d = 2*radius;
+			var geometry = new THREE.BoxGeometry(d,d,d);
+			var dummy = new THREE.Mesh( geometry );
+			dummy.visible = false; return dummy;
+		})( radius );
 
 	//	player entity.
 		var player = (function(mesh){
@@ -18,7 +20,7 @@
 			entity.name = "local player";
 			scene.add( entity );
 			return entity;
-		})(mesh);
+		})( mesh );
 
 	//	player helper.
 		var helper = (function( r ){
