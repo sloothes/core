@@ -3,10 +3,11 @@
 
 	const localPlayer = (function(){
 
-		var radius = 0.85;
+		var radius = 0.85; // important!
 
 	//	A dummy mesh (required for entity).
-	//	You may replace it with a skinned mesh.
+	//	You may replace with a skinned mesh.
+
 		var mesh = (function(d){
 			var geometry = new THREE.BoxGeometry(d,d,d);
 			var material = new THREE.MeshBasicMaterial();
@@ -17,6 +18,7 @@
 	//	player entity.
 		var player = (function(mesh){
 			var entity = new Entity(mesh);
+			entity.radius = radius;
 			entity.position.set( 0, 0, 0 );
 			entity.name = "local player";
 			scene.add( entity );
