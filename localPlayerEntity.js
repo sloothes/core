@@ -5,14 +5,20 @@
 
 		var radius = 0.85;
 
+	//	required for entity.
+		var mesh = (function(d){
+			var geometry = new THREE.BoxGeometry(d,d,d);
+			return new THREE.Mesh(geometry);
+		})( 0.2 );
+
 	//	player.
-		var player = (function(){
-			var player = new Entity();
+		var player = (function(mesh){
+			var player = new Entity(mesh);
 			player.position.set( 0, 0, 0 );
 			player.name = "local player";
 			scene.add( player );
 			return player;
-		})();
+		})(mesh);
 
 	//	helper.
 		var helper = (function( r ){
