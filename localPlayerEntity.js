@@ -1,5 +1,5 @@
 //	localPlayerEntity.js (experimental)
-//	requires ThreeSteeringBehaviours.js
+//	requires ThreeSteeringBehaviours.js entity.
 
 	const localPlayer = (function(){
 
