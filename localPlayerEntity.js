@@ -6,12 +6,12 @@
 		var radius = 0.85;
 
 	//	A dummy mesh (required for entity).
-		var mesh = (function(radius){
-			var d = 2*radius;
+		var mesh = (function(d){
 			var geometry = new THREE.BoxGeometry(d,d,d);
-			var dummy = new THREE.Mesh( geometry );
+			var material = new THREE.MeshBasicMaterial();
+			var dummy = new THREE.Mesh(geometry,material);
 			dummy.visible = false; return dummy;
-		})( radius );
+		})( 1.0 );
 
 	//	player entity.
 		var player = (function(mesh){
