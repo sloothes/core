@@ -49,9 +49,9 @@
 				object.rotation.y = value + Math.PI;
 			});
 		//	Reset player position.
-			watch(controller.center, "y", function(prop,action,value){
-				if ( value < -1 ) controller.center.set(0, radius, 0);
-			}); 
+		//	watch(controller.center, "y", function(prop,action,value){
+		//		if ( value < -1 ) controller.center.set(0, radius, 0);
+		//	}); 
 			return controller;
 		})( player, radius );
 
