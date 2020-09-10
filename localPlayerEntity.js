@@ -11,16 +11,16 @@
 			return new THREE.Mesh( geometry );
 		})();
 
-	//	player.
+	//	player entity.
 		var player = (function(mesh){
-			var player = new Entity(mesh);
-			player.position.set( 0, 0, 0 );
-			player.name = "local player";
-			scene.add( player );
-			return player;
+			var entity = new Entity(mesh);
+			entity.position.set( 0, 0, 0 );
+			entity.name = "local player";
+			scene.add( entity );
+			return entity;
 		})(mesh);
 
-	//	helper.
+	//	player helper.
 		var helper = (function( r ){
 			var sphere = new THREE.SphereGeometry( r, 8, 6 );
 			var geometry = new THREE.EdgesGeometry( sphere );
