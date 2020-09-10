@@ -19,7 +19,7 @@
 			entity.position.set( 0, 0, 0 );
 			entity.name = "local player";
 			scene.add( entity );
-			return entity;
+			return entity; // important!
 		})( mesh );
 
 	//	player helper.
@@ -34,7 +34,7 @@
 
 		player.add( helper );
 
-	//	controller.
+	//	player controller.
 		player.controller = (function( object, radius ){
 			var controller = new MW.CharacterController( object, radius );
 			controller.movementSpeed = 5;
