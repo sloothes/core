@@ -5,11 +5,11 @@
 
 		var radius = 0.85;
 
-	//	required for entity.
-		var mesh = (function(d){
-			var geometry = new THREE.BoxGeometry(d,d,d);
-			return new THREE.Mesh(geometry);
-		})( 0.2 );
+	//	A dummy mesh (required for entity).
+		var mesh = (function(){
+			var geometry = new THREE.Geometry();
+			return new THREE.Mesh( geometry );
+		})();
 
 	//	player.
 		var player = (function(mesh){
