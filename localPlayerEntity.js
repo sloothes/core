@@ -6,6 +6,7 @@
 		var radius = 0.85;
 
 	//	A dummy mesh (required for entity).
+	//	You may replace it with a skinned mesh.
 		var mesh = (function(d){
 			var geometry = new THREE.BoxGeometry(d,d,d);
 			var material = new THREE.MeshBasicMaterial();
